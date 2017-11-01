@@ -7,4 +7,12 @@ public class FabricaDeFiltros {
 		return f;
 		
 	}
+	
+	public FilterOp sky() {
+		FilterOp f = new Modulate(120,10,100)
+			.nextOp(new Fill(#0000FF))
+			.nextOp(new Gamma(1))
+			.nextOp(new Contrast());
+		return f;
+	}
 }
